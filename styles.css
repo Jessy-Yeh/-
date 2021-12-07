@@ -78,8 +78,12 @@ select {
   }
 }
 
+:root {
+  --light-primary: #e59866;
+}
+
 body {
-  background-color: #f9f8e9;
+  background-color: #fef5e7;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,14 +101,14 @@ body {
 }
 
 .header {
-  background-color: #f5f5db;
+  background-color: #ffdaa8;
   display: flex;
   justify-content: center;
   padding: 50px 20px;
 }
 
 #logo {
-  width: 50%;
+  width: 30%;
 }
 .product,
 .checkout {
@@ -120,14 +124,14 @@ h2 {
 }
 
 h3 {
-  color: #687728;
+  color: var(--light-primary);
   position: relative;
   font-size: 2rem;
 }
 
 h3::before {
   content: "";
-  background-color: #a2ab5d;
+  background-color: #dc7633;
   position: absolute;
   width: 6px;
   height: 100%;
@@ -139,7 +143,7 @@ h3:not(:first-of-type) {
 }
 
 .product-list {
-  color: #687728;
+  color: var(--light-primary);
 }
 
 .product-list > li {
@@ -151,11 +155,11 @@ h3:not(:first-of-type) {
 }
 
 .product-list > li:nth-of-type(n) {
-  background-color: hsl(58, 48%, 95%);
+  background-color: #fef5e7;
 }
 
 .product-list > li:nth-of-type(2n) {
-  background-color: #edeccc;
+  background-color: #fae5d3;
 }
 
 .sub-container {
@@ -181,7 +185,7 @@ h3:not(:first-of-type) {
 
 .user-details {
   /* flex: 2; */
-  /* background-color: #edeccc; */
+  /* background-color: #FAE5D3 ; */
 }
 
 .client-info {
@@ -192,7 +196,7 @@ h3:not(:first-of-type) {
 
 .client-info > li {
   margin: 0px 50px 10px 0px;
-  color: #687728;
+  color: var(--light-primary);
   width: 100%;
 }
 
@@ -210,8 +214,8 @@ ul {
 }
 
 h4 {
-  color: #a2ab5d;
-  font-weight: 400;
+  color: #f1b299;
+  font-weight: 700;
   margin: 40px 0px 12px 0px;
 }
 
@@ -235,9 +239,9 @@ select {
   padding: 1.5rem;
   justify-content: center;
   align-items: center;
-  background-color: #edeccc;
+  background-color: #fae5d3;
   border-radius: 5px;
-  color: #687728;
+  color: var(--light-primary);
   font-size: 18px;
   font-weight: bold;
 }
@@ -252,13 +256,13 @@ select {
 
 .payment-btn {
   display: inline;
-  color: #687728;
+  color: var(--light-primary);
   margin: 10px;
   cursor: pointer;
 }
 
 p {
-  color: #687728;
+  color: var(--light-primary);
 }
 
 .number-input,
@@ -281,7 +285,7 @@ input::placeholder {
   color: white;
   border-style: none;
   border-radius: 5px;
-  background-color: #a2ab5d;
+  background-color: #dc7633;
   padding: 16px;
   width: 100%;
   cursor: pointer;
@@ -289,7 +293,7 @@ input::placeholder {
   box-shadow: 0px 0px 16px -3px rgba(0, 0, 0, 0.45);
 }
 .order-submit-btn:hover {
-  background-color: #687728;
+  background-color: var(--light-primary);
 }
 
 @media screen and (max-width: 600px) {
