@@ -1,0 +1,355 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+ol,
+ul {
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: #f9f8e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+.container {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 2px 16px 5px rgba(0, 0, 0, 0.19);
+  max-width: 800px;
+  padding-bottom: 2rem;
+}
+
+.header {
+  background-color: #f5f5db;
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+#logo {
+  width: 50%;
+}
+.product,
+.checkout {
+  padding: 40px 30px;
+}
+
+h2 {
+  font-size: 3rem;
+  text-align: center;
+  color: #f1b299;
+  padding: 10px;
+  margin-top: 15px;
+}
+
+h3 {
+  color: #687728;
+  position: relative;
+  font-size: 2rem;
+}
+
+h3::before {
+  content: "";
+  background-color: #a2ab5d;
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  left: -30px;
+}
+
+h3:not(:first-of-type) {
+  margin-top: 70px;
+}
+
+.product-list {
+  color: #687728;
+}
+
+.product-list > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+.product-list > li:nth-of-type(n) {
+  background-color: hsl(58, 48%, 95%);
+}
+
+.product-list > li:nth-of-type(2n) {
+  background-color: #edeccc;
+}
+
+.sub-container {
+  display: flex;
+}
+
+.sub-container > div {
+  width: 50%;
+}
+
+.total-fee {
+  display: flex;
+}
+
+#jko-pay-img {
+  width: 50%;
+  margin-bottom: 40px;
+}
+
+.selected-product h4 {
+  margin-top: 20px;
+}
+
+.user-details {
+  /* flex: 2; */
+  /* background-color: #edeccc; */
+}
+
+.client-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.client-info > li {
+  margin: 0px 50px 10px 0px;
+  color: #687728;
+  width: 100%;
+}
+
+.client-info > li > input {
+  width: 100%;
+}
+
+select {
+  width: 100%;
+  padding: 4px 8px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h4 {
+  color: #a2ab5d;
+  font-weight: 400;
+  margin: 40px 0px 12px 0px;
+}
+
+label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+#delivery-text {
+  margin-bottom: 10px;
+}
+
+select {
+  margin-bottom: 30px;
+}
+
+.total-amount {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #edeccc;
+  border-radius: 5px;
+  color: #687728;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#amount {
+  font-size: 25px;
+}
+
+#payment-text {
+  margin-bottom: 20px;
+}
+
+.payment-btn {
+  display: inline;
+  color: #687728;
+  margin: 10px;
+  cursor: pointer;
+}
+
+p {
+  color: #687728;
+}
+
+.number-input,
+.user-info-input {
+  padding: 4px 8px;
+}
+
+input::placeholder {
+  color: #bcbcbc;
+}
+
+.payment-description {
+  color: #85929e;
+  font-size: 14px;
+  margin-left: 35px;
+  margin-bottom: 20px;
+}
+
+.order-submit-btn {
+  color: white;
+  border-style: none;
+  border-radius: 5px;
+  background-color: #a2ab5d;
+  padding: 16px;
+  width: 100%;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  box-shadow: 0px 0px 16px -3px rgba(0, 0, 0, 0.45);
+}
+.order-submit-btn:hover {
+  background-color: #687728;
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    padding: 20px;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3::before {
+    left: -20px;
+  }
+  .product,
+  .checkout {
+    padding: 30px 20px;
+  }
+  .number-input {
+    width: 135px;
+    margin-left: 10px;
+  }
+  #jko-pay-img {
+    width: 100%;
+  }
+
+  .sub-container {
+    flex-direction: column;
+  }
+  .sub-container > div {
+    width: auto;
+  }
+  .checkout-left {
+    order: 0;
+  }
+  .checkout-right {
+    order: 1;
+  }
+  .client-info > li {
+    margin: 10px 0px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .number-input,
+  .user-info-input {
+    width: 100%;
+    margin-left: 0;
+  }
+  #jko-pay-img {
+    width: 100%;
+  }
+  body {
+    padding: 0px;
+  }
+
+  .container {
+    border-radius: 0;
+  }
+  .product-list > li {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+}
