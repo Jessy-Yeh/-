@@ -8,7 +8,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/warm-logo.png"
+      href="images/warm-logo.png"
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,10 +20,11 @@
 
     <title>團圓GO購樂</title>
 
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script src="js/script.js" defer></script>
   </head>
   <body>
-    <div class="container">
+    <form class="container" id="order-form" method='POST' name='order-form' data-netlify='true'>
       <section class="header">
         <img id="logo" src="images/warm-logo.png" />
       </section>
@@ -40,6 +41,7 @@
               type="number"
               class="number-input"
               id="heitang-juhua"
+              name="heitang-juhua"
               placeholder="請填寫訂購數量"
             />
           </li>
@@ -151,7 +153,6 @@
       <section class="checkout">
         <h3>結帳</h3>
 
-        <form>
           <div class="sub-container">
             <div class="checkout-right">
               <h4>購買人資料</h4>
@@ -211,7 +212,7 @@
 
               <div class="delivery">
                 <h4>運送方式</h4>
-                <select class="delivery-method">
+                <select class="delivery-method" name="delivery-method">
                   <option>自取</option>
                   <option>郵寄+$80</option>
                   <option>711店到店+$60</option>
@@ -227,7 +228,7 @@
           <div>
             <h4 id="payment-text">付款方式</h4>
 
-            <input type="radio" id="bank-transfer" name="payment-method" />
+            <input type="radio" id="bank-transfer" name="payment-method" value="bank-transfer" />
             <label for="bank-transfer" class="payment-btn"
               >銀行轉帳
               <p class="payment-description">
@@ -235,7 +236,7 @@
               </p>
             </label>
 
-            <input type="radio" id="jko-transfer" name="payment-method" />
+            <input type="radio" id="jko-transfer" name="payment-method" value="jko-transfer" />
             <label for="jko-transfer" class="payment-btn"
               >街口支付
               <p class="payment-description">請掃描以下QR進行街口支付</p>
@@ -244,9 +245,8 @@
             <img id="jko-pay-img" src="images/jko.jpg" />
           </div>
           <input type="submit" value="送出訂單" class="order-submit-btn" />
-        </form>
       </section>
-    </div>
+    </form>
 
     <!-- don't let the number input go below 0 -->
     <!-- set required fields -->
