@@ -24,7 +24,13 @@
     <script src="js/script.js" defer></script>
   </head>
   <body>
-    <form class="container" id="order-form" method='POST' name='order-form' data-netlify='true'>
+    <form
+      class="container"
+      id="order-form"
+      method="POST"
+      name="order-form"
+      data-netlify="true"
+    >
       <section class="header">
         <img id="logo" src="images/warm-logo.png" />
       </section>
@@ -51,6 +57,7 @@
               type="number"
               class="number-input"
               id="heitang-guihua"
+              name="heitang-guihua"
               placeholder="請填寫訂購數量"
             />
           </li>
@@ -60,6 +67,7 @@
               type="number"
               class="number-input"
               id="han-tian"
+              name="han-tian"
               placeholder="請填寫訂購數量"
             />
           </li>
@@ -69,6 +77,7 @@
               type="number"
               class="number-input"
               id="hong-zao"
+              name="hong-zao"
               placeholder="請填寫訂購數量"
             />
           </li>
@@ -78,6 +87,7 @@
               type="number"
               class="number-input"
               id="heitang-jiangmu"
+              name="heitang-jiangmu"
               placeholder="請填寫訂購數量"
             />
           </li>
@@ -87,6 +97,7 @@
               type="number"
               class="number-input"
               id="heitang-fourinone"
+              name="heitang-fourinone"
               placeholder="請填寫訂購數量"
             />
           </li>
@@ -101,6 +112,7 @@
               type="number"
               class="number-input"
               id="honey-jelly-bar"
+              name="honey-jelly-bar"
               placeholder="請填寫訂購數量"
             />
           </li>
@@ -110,6 +122,7 @@
               type="number"
               class="number-input"
               id="longyan-honey"
+              name="longyan-honey"
               placeholder="請填寫訂購數量"
             />
           </li>
@@ -119,6 +132,7 @@
               type="number"
               class="number-input"
               id="flower-honey"
+              name="flower-honey"
               placeholder="請填寫訂購數量"
             />
           </li>
@@ -128,6 +142,7 @@
               type="number"
               class="number-input"
               id="guifei-honey"
+              name="guifei-honey"
               placeholder="請填寫訂購數量"
             />
           </li>
@@ -144,6 +159,7 @@
               type="number"
               class="number-input"
               id="sesame-powder"
+              name="sesame-powder"
               placeholder="請填寫訂購數量"
             />
           </li>
@@ -153,98 +169,100 @@
       <section class="checkout">
         <h3>結帳</h3>
 
-          <div class="sub-container">
-            <div class="checkout-right">
-              <h4>購買人資料</h4>
+        <div class="sub-container">
+          <div class="checkout-right">
+            <h4>購買人資料</h4>
 
-              <ul class="client-info">
-                <li>
-                  <label for="full-name">姓名</label>
-                  <input type="text" class="user-info-input" id="full-name" />
-                </li>
-                <li>
-                  <label for="phone-number">電話</label>
-                  <input
-                    type="text"
-                    class="user-info-input"
-                    id="phone-number"
-                  />
-                </li>
-                <li>
-                  <label for="email-address">信箱</label>
-                  <input
-                    type="text"
-                    class="user-info-input"
-                    id="email-address"
-                  />
-                </li>
-                <li>
-                  <label for="address">寄送地址 / 超商門市名稱</label>
-                  <input
-                    type="text"
-                    placeholder='自取填"無"；超商取貨填“超商+店名”'
-                    class="user-info-input"
-                    id="address"
-                  />
-                </li>
-                <li>
-                  <label for="account-digits">匯款帳號後五碼</label>
-                  <input
-                    type="text"
-                    placeholder="請於下方選擇匯款方式後再填入"
-                    class="user-info-input"
-                    id="account-digits"
-                  />
-                </li>
+            <ul class="client-info">
+              <li>
+                <label for="full-name">姓名</label>
+                <input type="text" class="user-info-input" id="full-name" name="full-name" />
+              </li>
+              <li>
+                <label for="phone-number">電話</label>
+                <input type="text" class="user-info-input" id="phone-number" name="phone-number" />
+              </li>
+              <li>
+                <label for="email-address">信箱</label>
+                <input type="text" class="user-info-input" id="email-address" name="email-address" />
+              </li>
+              <li>
+                <label for="address">寄送地址 / 超商門市名稱</label>
+                <input
+                  type="text"
+                  placeholder='自取填"無"；超商取貨填“超商+店名”'
+                  class="user-info-input"
+                  id="address"
+                  name="delivery-address"
+                />
+              </li>
+              <li>
+                <label for="account-digits">匯款帳號後五碼</label>
+                <input
+                  type="text"
+                  placeholder="請於下方選擇匯款方式後再填入"
+                  class="user-info-input"
+                  id="account-digits"
+                  name="account-digits"
+                />
+              </li>
+            </ul>
+          </div>
+
+          <div class="checkout-left">
+            <div class="selected-product">
+              <h4>已選購商品</h4>
+              <ul>
+                <!--fake text  -->
+                <li><p>黑糖薑母 - $190/包 X 4 = $760</p></li>
+                <li><p>宏碁蜂蜜果凍條 - $70/盒 X 2 = $140</p></li>
+                <li><p>芝初高鈣黑芝麻粉(200g/袋) - $150/袋 X 1 = $150</p></li>
               </ul>
             </div>
 
-            <div class="checkout-left">
-              <div class="selected-product">
-                <h4>已選購商品</h4>
-                <ul>
-                  <!--fake text  -->
-                  <li><p>黑糖薑母 - $190/包 X 4 = $760</p></li>
-                  <li><p>宏碁蜂蜜果凍條 - $70/盒 X 2 = $140</p></li>
-                  <li><p>芝初高鈣黑芝麻粉(200g/袋) - $150/袋 X 1 = $150</p></li>
-                </ul>
-              </div>
-
-              <div class="delivery">
-                <h4>運送方式</h4>
-                <select class="delivery-method" name="delivery-method">
-                  <option>自取</option>
-                  <option>郵寄+$80</option>
-                  <option>711店到店+$60</option>
-                  <option>全家店到店+$60</option>
-                </select>
-                <div class="total-amount">
-                  <p>商品含運總金額</p>
-                  <p id="amount">$1089</p>
-                </div>
+            <div class="delivery">
+              <h4>運送方式</h4>
+              <select class="delivery-method" name="delivery-method">
+                <option value="collect">自取</option>
+                <option value="post">郵寄+$80</option>
+                <option value="711">711店到店+$60</option>
+                <option value="family-mart">全家店到店+$60</option>
+              </select>
+              <div class="total-amount">
+                <p>商品含運總金額</p>
+                <p id="amount">$1089</p>
               </div>
             </div>
           </div>
-          <div>
-            <h4 id="payment-text">付款方式</h4>
+        </div>
+        <div>
+          <h4 id="payment-text">付款方式</h4>
 
-            <input type="radio" id="bank-transfer" name="payment-method" value="bank-transfer" />
-            <label for="bank-transfer" class="payment-btn"
-              >銀行轉帳
-              <p class="payment-description">
-                富邦銀行 (012) 8168-0000-389-265
-              </p>
-            </label>
+          <input
+            type="radio"
+            id="bank-transfer"
+            name="payment-method"
+            value="bank-transfer"
+          />
+          <label for="bank-transfer" class="payment-btn"
+            >銀行轉帳
+            <p class="payment-description">富邦銀行 (012) 8168-0000-389-265</p>
+          </label>
 
-            <input type="radio" id="jko-transfer" name="payment-method" value="jko-transfer" />
-            <label for="jko-transfer" class="payment-btn"
-              >街口支付
-              <p class="payment-description">請掃描以下QR進行街口支付</p>
-            </label>
+          <input
+            type="radio"
+            id="jko-transfer"
+            name="payment-method"
+            value="jko-transfer"
+          />
+          <label for="jko-transfer" class="payment-btn"
+            >街口支付
+            <p class="payment-description">請掃描以下QR進行街口支付</p>
+          </label>
 
-            <img id="jko-pay-img" src="images/jko.jpg" />
-          </div>
-          <input type="submit" value="送出訂單" class="order-submit-btn" />
+          <img id="jko-pay-img" src="images/jko.jpg" />
+        </div>
+        <input type="submit" value="送出訂單" class="order-submit-btn" />
       </section>
     </form>
 
