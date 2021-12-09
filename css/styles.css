@@ -79,7 +79,7 @@ select {
 }
 
 :root {
-  --light-primary: #e59866;
+  --light-primary: #eb8264;
 }
 
 body {
@@ -118,7 +118,7 @@ body {
 h2 {
   font-size: 3rem;
   text-align: center;
-  color: #f1b299;
+  color: #eb8264;
   padding: 10px;
   margin-top: 15px;
 }
@@ -183,11 +183,6 @@ h3:not(:first-of-type) {
   margin-top: 20px;
 }
 
-.user-details {
-  /* flex: 2; */
-  /* background-color: #FAE5D3 ; */
-}
-
 .client-info {
   display: flex;
   flex-wrap: wrap;
@@ -214,7 +209,7 @@ ul {
 }
 
 h4 {
-  color: #f1b299;
+  color: #dc7633;
   font-weight: 700;
   margin: 40px 0px 12px 0px;
 }
@@ -223,6 +218,12 @@ label {
   display: block;
   font-size: 1.2rem;
   margin-bottom: 8px;
+}
+
+label > p {
+  font-size: 12px;
+  color: #ca907e;
+  margin-top: 5px;
 }
 
 #delivery-text {
@@ -298,7 +299,7 @@ input::placeholder {
 
 @media screen and (max-width: 600px) {
   .header {
-    padding: 20px;
+    padding: 40px;
   }
   h2 {
     font-size: 2rem;
