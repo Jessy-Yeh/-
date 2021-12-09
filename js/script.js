@@ -1,4 +1,4 @@
-const orderForm = document.getElementById('#order-form');
+const orderForm = document.getElementById('order-form');
 
 orderForm.addEventListener('submit', async function submitForm(event) {
   event.preventDefault();
@@ -13,7 +13,7 @@ orderForm.addEventListener('submit', async function submitForm(event) {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: processedData,
     });
-    history.push('/thankyou.html');
+    window.location.assign('/thankyou.html');
   } catch (error) {
     console.log(error);
   }
