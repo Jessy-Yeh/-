@@ -176,7 +176,8 @@ h3:not(:first-of-type) {
 
 #jko-pay-img {
   width: 50%;
-  margin-bottom: 40px;
+  margin: 0 auto 40px;
+  border-radius: 5px;
 }
 
 .hidden {
@@ -323,7 +324,6 @@ input::placeholder {
   #jko-pay-img {
     width: 100%;
   }
-
   .sub-container {
     flex-direction: column;
   }
@@ -339,7 +339,6 @@ input::placeholder {
   .client-info > li {
     margin: 10px 0px;
   }
-
   #logo {
     width: 40%;
   }
@@ -351,13 +350,9 @@ input::placeholder {
     width: 100%;
     margin-left: 0;
   }
-  #jko-pay-img {
-    width: 100%;
-  }
   body {
     padding: 0px;
   }
-
   .container {
     border-radius: 0;
   }
