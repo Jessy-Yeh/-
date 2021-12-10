@@ -300,7 +300,7 @@ input::placeholder {
 
 @media screen and (max-width: 600px) {
   .header {
-    padding: 40px;
+    padding: 30px 40px;
   }
   h2 {
     font-size: 2rem;
@@ -334,6 +334,10 @@ input::placeholder {
   }
   .client-info > li {
     margin: 10px 0px;
+  }
+
+  #logo {
+    width: 40%;
   }
 }
 
