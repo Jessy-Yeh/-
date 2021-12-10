@@ -179,6 +179,10 @@ h3:not(:first-of-type) {
   margin-bottom: 40px;
 }
 
+.hidden {
+  display: none;
+}
+
 .selected-product h4 {
   margin-top: 20px;
 }

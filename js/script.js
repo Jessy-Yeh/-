@@ -1,6 +1,17 @@
-const orderForm = document.getElementById('order-form');
+const orderForm = document.getElementById("order-form");
+const jkoTransfer = document.getElementById("jko-transfer");
+const bankTransfer = document.getElementById("bank-transfer");
+const jkoImg = document.getElementById("jko-pay-img");
 
-orderForm.addEventListener('submit', async function submitForm(event) {
+jkoTransfer.addEventListener("click", function () {
+  jkoImg.classList.remove("hidden");
+});
+
+bankTransfer.addEventListener("click", function () {
+  jkoImg.classList.add("hidden");
+});
+
+orderForm.addEventListener("submit", async function submitForm(event) {
   event.preventDefault();
 
   const formData = new FormData(event.target);
@@ -8,12 +19,12 @@ orderForm.addEventListener('submit', async function submitForm(event) {
   console.log(processedData);
 
   try {
-    await fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: processedData,
     });
-    window.location.assign('/thankyou.html');
+    window.location.assign("/thankyou.html");
   } catch (error) {
     console.log(error);
   }
