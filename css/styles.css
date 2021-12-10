@@ -269,6 +269,7 @@ p {
 .number-input,
 .user-info-input {
   padding: 4px 8px;
+  margin-bottom: 12px;
 }
 
 input::placeholder {
