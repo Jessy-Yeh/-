@@ -41,12 +41,23 @@ deliveryMethodSelect.addEventListener('change', function () {
   updateTotalCost();
 });
 
-productInputs.forEach((input, index) => input.addEventListener('change', function () {
-  updateTotalCost();
-  updateSelectedProducts();
-}));
+productInputs.forEach(input => {
+  const label = input.previousElementSibling;
+  const captionSpan = label.querySelector('.caption');
+  const costSpan = label.querySelector('.cost');
+  const unitSpan = label.querySelector('.unit');
 
-function updateTotalCost () {
+  captionSpan.innerHTML = input.dataset.caption;
+  costSpan.innerHTML = input.dataset.cost;
+  unitSpan.innerHTML = input.dataset.unit;
+
+  input.addEventListener('change', function () {
+    updateTotalCost();
+    updateSelectedProducts();
+  });
+})
+
+function updateTotalCost() {
   allProducts = [...productInputs].map(input => {
     return { name: input.dataset.caption, unit: input.dataset.unit, cost: Number(input.dataset.cost), quantity: Number(input.value) || 0 }
   });
@@ -58,7 +69,7 @@ function updateTotalCost () {
   totalAmount.innerHTML = "$" + totalCost;
 }
 
-function updateSelectedProducts () {
+function updateSelectedProducts() {
   selectedProductList.innerHTML = selectedProducts.map(product => `
   <li>
     <p>${product.name} - $${product.cost}/${product.unit} X ${product.quantity} = ${product.cost * product.quantity}</p>
