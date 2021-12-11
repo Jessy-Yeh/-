@@ -56,6 +56,7 @@ productInputs.forEach(input => {
   unitSpan.innerHTML = input.dataset.unit;
 
   input.addEventListener('change', function () {
+    if (Number(this.value) < 0) this.value = null;
     updateTotalCost();
     updateSelectedProducts();
   });
