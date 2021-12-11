@@ -22,8 +22,12 @@ orderForm.addEventListener("submit", async function submitForm(event) {
   event.preventDefault();
 
   const formData = new FormData(event.target);
+  productInputs.forEach(input => {
+    if (input.value < 1) {
+      formData.delete(input.name);
+    }
+  })
   const processedData = new URLSearchParams(formData).toString();
-  console.log(processedData);
 
   try {
     await fetch("/", {
