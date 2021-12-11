@@ -9,6 +9,7 @@ const productInputs = document.querySelectorAll('.product-list input');
 
 let allProducts = [];
 let selectedProducts = [];
+let totalCost = 0;
 
 jkoTransfer.addEventListener("click", function () {
   jkoImg.classList.remove("hidden");
@@ -24,10 +25,15 @@ orderForm.addEventListener("submit", async function submitForm(event) {
   const formData = new FormData(event.target);
   productInputs.forEach(input => {
     if (input.value < 1) {
+      console.log(formData);
+      console.log(formData.get(input.name));
       formData.delete(input.name);
     }
   })
+  formData.append("totalCost", totalCost);
   const processedData = new URLSearchParams(formData).toString();
+
+  // console.log(processedData);
 
   try {
     await fetch("/", {
@@ -45,23 +51,12 @@ deliveryMethodSelect.addEventListener('change', function () {
   updateTotalCost();
 });
 
-productInputs.forEach(input => {
-  const label = input.previousElementSibling;
-  const captionSpan = label.querySelector('.caption');
-  const costSpan = label.querySelector('.cost');
-  const unitSpan = label.querySelector('.unit');
-
-  captionSpan.innerHTML = input.dataset.caption;
-  costSpan.innerHTML = input.dataset.cost;
-  unitSpan.innerHTML = input.dataset.unit;
-
-  input.addEventListener('change', function () {
-    if (Number(this.value) < 0) this.value = null;
-    if (Number(this.value) > 99) this.value = 99;
-    updateTotalCost();
-    updateSelectedProducts();
-  });
-})
+productInputs.forEach(input => input.addEventListener('change', function () {
+  if (Number(this.value) < 0) this.value = null;
+  if (Number(this.value) > 99) this.value = 99;
+  updateTotalCost();
+  updateSelectedProducts();
+}));
 
 function updateTotalCost() {
   allProducts = [...productInputs].map(input => {
@@ -71,7 +66,7 @@ function updateTotalCost() {
 
   const deliveryCost = Number(deliveryMethodSelect.querySelector("option:checked").dataset.cost);
 
-  const totalCost = deliveryCost + selectedProducts.reduce((acc, obj) => acc + obj.cost * obj.quantity, 0);
+  totalCost = deliveryCost + selectedProducts.reduce((acc, obj) => acc + obj.cost * obj.quantity, 0);
   totalAmount.innerHTML = "$" + totalCost;
 }
 
