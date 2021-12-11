@@ -51,7 +51,7 @@
             </label>
             <input
               type="number"
-              inputmode="decimal"
+              inputmode="numeric"
               class="number-input"
               id="heitang-juhua"
               name="heitang-juhua"
@@ -70,7 +70,7 @@
             </label>
             <input
               type="number"
-              inputmode="decimal"
+              inputmode="numeric"
               class="number-input"
               id="heitang-guihua"
               name="heitang-guihua"
@@ -89,7 +89,7 @@
             </label>
             <input
               type="number"
-              inputmode="decimal"
+              inputmode="numeric"
               class="number-input"
               id="han-tian"
               name="han-tian"
@@ -108,7 +108,7 @@
             </label>
             <input
               type="number"
-              inputmode="decimal"
+              inputmode="numeric"
               class="number-input"
               id="hong-zao"
               name="hong-zao"
@@ -127,7 +127,7 @@
             </label>
             <input
               type="number"
-              inputmode="decimal"
+              inputmode="numeric"
               class="number-input"
               id="heitang-jiangmu"
               name="heitang-jiangmu"
@@ -146,7 +146,7 @@
             >
             <input
               type="number"
-              inputmode="decimal"
+              inputmode="numeric"
               class="number-input"
               id="heitang-fourinone"
               name="heitang-fourinone"
@@ -170,7 +170,7 @@
             >
             <input
               type="number"
-              inputmode="decimal"
+              inputmode="numeric"
               class="number-input"
               id="honey-jelly-bar"
               name="honey-jelly-bar"
@@ -189,7 +189,7 @@
             >
             <input
               type="number"
-              inputmode="decimal"
+              inputmode="numeric"
               class="number-input"
               id="longyan-honey"
               name="longyan-honey"
@@ -208,7 +208,7 @@
             >
             <input
               type="number"
-              inputmode="decimal"
+              inputmode="numeric"
               class="number-input"
               id="flower-honey"
               name="flower-honey"
@@ -227,7 +227,7 @@
             >
             <input
               type="number"
-              inputmode="decimal"
+              inputmode="numeric"
               class="number-input"
               id="guifei-honey"
               name="guifei-honey"
@@ -251,7 +251,7 @@
             >
             <input
               type="number"
-              inputmode="decimal"
+              inputmode="numeric"
               class="number-input"
               id="sesame-powder"
               name="sesame-powder"
@@ -270,7 +270,7 @@
             >
             <input
               type="number"
-              inputmode="decimal"
+              inputmode="numeric"
               class="number-input"
               id="chestnut"
               name="chestnut"
@@ -289,7 +289,7 @@
             >
             <input
               type="number"
-              inputmode="decimal"
+              inputmode="numeric"
               class="number-input"
               id="thai-plum"
               name="thai-plum"
@@ -308,7 +308,7 @@
             >
             <input
               type="number"
-              inputmode="decimal"
+              inputmode="numeric"
               class="number-input"
               id="pocky-choco"
               name="pocky-choco"
@@ -327,7 +327,7 @@
             >
             <input
               type="number"
-              inputmode="decimal"
+              inputmode="numeric"
               class="number-input"
               id="shredded-squid"
               name="shredded-squid"
@@ -346,7 +346,7 @@
             >
             <input
               type="number"
-              inputmode="decimal"
+              inputmode="numeric"
               class="number-input"
               id="chicken-noodles"
               name="chicken-noodles"
@@ -381,6 +381,7 @@
                 <label for="phone-number">電話*</label>
                 <input
                   type="tel"
+                  pattern="^(?=.*[0-9])[- +()0-9]+$"
                   class="user-info-input"
                   id="phone-number"
                   name="phone-number"
@@ -412,7 +413,8 @@
                 <label for="account-digits">匯款帳號後五碼*</label>
                 <input
                   type="number"
-                  inputmode="decimal"
+                  inputmode="numeric"
+                  pattern="\d{5}"
                   placeholder="請於下方選擇匯款方式後再填入"
                   class="user-info-input"
                   id="account-digits"
