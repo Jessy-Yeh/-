@@ -43,7 +43,7 @@ function displaySelectedProducts() {
   <li>
     <p>${product.name} - $${product.cost}/${product.unit} X ${
         product.quantity
-      } = ${product.cost * product.quantity}</p>
+      } = $${product.cost * product.quantity}</p>
   </li>`
     )
     .join("") || "<li><p>無</p></li>";
