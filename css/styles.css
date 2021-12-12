@@ -432,7 +432,7 @@ input::placeholder {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 480px) {
   .number-input,
   .user-info-input {
     width: 100%;
