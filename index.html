@@ -21,455 +21,458 @@
     <title>團圓GO購樂</title>
 
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
+    <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js" defer></script>
     <script src="js/script.js" defer></script>
   </head>
   <body>
     <form
-      class="container"
+      class="gform"
       id="order-form"
       method="POST"
       name="order-form"
       subject="Order"
-      data-netlify="true"
-    >
-      <section class="header">
-        <img id="logo" src="images/warm-logo-v2.png" />
-      </section>
+      action="https://script.google.com/macros/s/AKfycbyVxWUiD-wS6m5ldubLU1v_sOgiQvP6kgNSeFRci7BRSztoz48SJIVzxHwdZ0OsNKD7/exec"
+      >
+      <div class="container">
+        <section class="header">
+          <img id="logo" src="images/warm-logo-v2.png" />
+        </section>
 
-      <h2>團圓吃，才GO樂！</h2>
+        <h2>團圓吃，才GO樂！</h2>
 
-      <section class="product">
-        <h3 class="category">黑丸嫩仙草 - 黑糖磚</h3>
+        <section class="product">
+          <h3 class="category">黑丸嫩仙草 - 黑糖磚</h3>
 
-        <ul class="product-list">
-          <li>
-            <label for="heitang-juhua"
-              >黑糖菊花 - $190/包
-              <p>一入35g，一包11入。</p>
-            </label>
-            <input
-              type="number"
-              inputmode="numeric"
-              class="number-input"
-              id="heitang-juhua"
-              name="heitang-juhua"
-              placeholder="請填寫訂購數量"
-              data-cost="190"
-              data-caption="黑糖菊花"
-              data-unit="包"
-            />
-          </li>
-          <li>
-            <label for="heitang-guihua"
-              >黑糖桂花 - $190/包
-              <p>一入35g，一包11入。</p>
-            </label>
-            <input
-              type="number"
-              inputmode="numeric"
-              class="number-input"
-              id="heitang-guihua"
-              name="heitang-guihua"
-              placeholder="請填寫訂購數量"
-              data-cost="190"
-              data-caption="黑糖桂花"
-              data-unit="包"
-            />
-          </li>
-          <li>
-            <label for="han-tian"
-              >寒天仙草 - $190/包
-              <p>一入35g，一包11入。</p>
-            </label>
-            <input
-              type="number"
-              inputmode="numeric"
-              class="number-input"
-              id="han-tian"
-              name="han-tian"
-              placeholder="請填寫訂購數量"
-              data-cost="190"
-              data-caption="寒天仙草"
-              data-unit="包"
-            />
-          </li>
-          <li>
-            <label for="hong-zao"
-              >紅棗桂圓 - $190/包
-              <p>一入35g，一包11入。</p>
-            </label>
-            <input
-              type="number"
-              inputmode="numeric"
-              class="number-input"
-              id="hong-zao"
-              name="hong-zao"
-              placeholder="請填寫訂購數量"
-              data-cost="190"
-              data-caption="紅棗桂圓"
-              data-unit="包"
-            />
-          </li>
-          <li>
-            <label for="heitang-jiangmu"
-              >黑糖薑母 - $190/包
-              <p>一入35g，一包11入。</p>
-            </label>
-            <input
-              type="number"
-              inputmode="numeric"
-              class="number-input"
-              id="heitang-jiangmu"
-              name="heitang-jiangmu"
-              placeholder="請填寫訂購數量"
-              data-cost="190"
-              data-caption="黑糖薑母"
-              data-unit="包"
-            />
-          </li>
-          <li>
-            <label for="heitang-fourinone"
-              >黑糖四合一 - $190/包
-              <p>一入35g，一包11入。</p></label
-            >
-            <input
-              type="number"
-              inputmode="numeric"
-              class="number-input"
-              id="heitang-fourinone"
-              name="heitang-fourinone"
-              placeholder="請填寫訂購數量"
-              data-cost="190"
-              data-caption="黑糖四合一"
-              data-unit="包"
-            />
-          </li>
-        </ul>
+          <ul class="product-list">
+            <li>
+              <label for="heitang-juhua"
+                >黑糖菊花 - $190/包
+                <p>一入35g，一包11入。</p>
+              </label>
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="heitang-juhua"
+                name="黑糖菊花"
+                placeholder="請填寫訂購數量"
+                data-cost="190"
+                data-caption="黑糖菊花"
+                data-unit="包"
+              />
+            </li>
+            <li>
+              <label for="heitang-guihua"
+                >黑糖桂花 - $190/包
+                <p>一入35g，一包11入。</p>
+              </label>
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="heitang-guihua"
+                name="黑糖桂花"
+                placeholder="請填寫訂購數量"
+                data-cost="190"
+                data-caption="黑糖桂花"
+                data-unit="包"
+              />
+            </li>
+            <li>
+              <label for="han-tian"
+                >寒天仙草 - $190/包
+                <p>一入35g，一包11入。</p>
+              </label>
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="han-tian"
+                name="寒天仙草"
+                placeholder="請填寫訂購數量"
+                data-cost="190"
+                data-caption="寒天仙草"
+                data-unit="包"
+              />
+            </li>
+            <li>
+              <label for="hong-zao"
+                >紅棗桂圓 - $190/包
+                <p>一入35g，一包11入。</p>
+              </label>
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="hong-zao"
+                name="紅棗桂圓"
+                placeholder="請填寫訂購數量"
+                data-cost="190"
+                data-caption="紅棗桂圓"
+                data-unit="包"
+              />
+            </li>
+            <li>
+              <label for="heitang-jiangmu"
+                >黑糖薑母 - $190/包
+                <p>一入35g，一包11入。</p>
+              </label>
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="heitang-jiangmu"
+                name="黑糖薑母"
+                placeholder="請填寫訂購數量"
+                data-cost="190"
+                data-caption="黑糖薑母"
+                data-unit="包"
+              />
+            </li>
+            <li>
+              <label for="heitang-fourinone"
+                >黑糖四合一 - $190/包
+                <p>一入35g，一包11入。</p></label
+              >
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="heitang-fourinone"
+                name="黑糖四合一"
+                placeholder="請填寫訂購數量"
+                data-cost="190"
+                data-caption="黑糖四合一"
+                data-unit="包"
+              />
+            </li>
+          </ul>
 
-        <h3 class="category">蜂蜜系列</h3>
+          <h3 class="category">蜂蜜系列</h3>
 
-        <ul class="product-list">
-          <li>
-            <label for="honey-jelly-bar"
-              >宏基蜂蜜果凍條 - $200/組
-              <p>一條19g，一盒共10條；3盒一組。</p></label
-            >
-            <input
-              type="number"
-              inputmode="numeric"
-              class="number-input"
-              id="honey-jelly-bar"
-              name="honey-jelly-bar"
-              placeholder="請填寫訂購數量"
-              data-cost="200"
-              data-caption="宏碁蜂蜜果凍條"
-              data-unit="組"
-            />
-          </li>
-          <li>
-            <label for="longyan-honey"
-              >隨身包蜂蜜 (龍眼蜜) - $489/盒
-              <p>一包20g，一盒共20包。</p></label
-            >
-            <input
-              type="number"
-              inputmode="numeric"
-              class="number-input"
-              id="longyan-honey"
-              name="longyan-honey"
-              placeholder="請填寫訂購數量"
-              data-cost="489"
-              data-caption="隨身包蜂蜜 (龍眼蜜)"
-              data-unit="盒"
-            />
-          </li>
-          <li>
-            <label for="flower-honey"
-              >隨身包蜂蜜 (百花蜜) - $489/盒
-              <p>一包20g，一盒共20包。</p></label
-            >
-            <input
-              type="number"
-              inputmode="numeric"
-              class="number-input"
-              id="flower-honey"
-              name="flower-honey"
-              placeholder="請填寫訂購數量"
-              data-cost="489"
-              data-caption="隨身包蜂蜜 (百花蜜)"
-              data-unit="盒"
-            />
-          </li>
-          <li>
-            <label for="guifei-honey"
-              >隨身包蜂蜜 (貴妃蜜) - $489/盒
-              <p>一包20g，一盒共20包。</p></label
-            >
-            <input
-              type="number"
-              inputmode="numeric"
-              class="number-input"
-              id="guifei-honey"
-              name="guifei-honey"
-              placeholder="請填寫訂購數量"
-              data-cost="489"
-              data-caption="隨身包蜂蜜 (貴妃蜜)"
-              data-unit="盒"
-            />
-          </li>
-        </ul>
+          <ul class="product-list">
+            <li>
+              <label for="honey-jelly-bar"
+                >宏基蜂蜜果凍條 - $200/組
+                <p>一條19g，一盒共10條；3盒一組。</p></label
+              >
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="honey-jelly-bar"
+                name="宏基蜂蜜果凍條"
+                placeholder="請填寫訂購數量"
+                data-cost="200"
+                data-caption="宏碁蜂蜜果凍條"
+                data-unit="組"
+              />
+            </li>
+            <li>
+              <label for="longyan-honey"
+                >隨身包蜂蜜 (龍眼蜜) - $489/盒
+                <p>一包20g，一盒共20包。</p></label
+              >
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="longyan-honey"
+                name="隨身包蜂蜜 (龍眼蜜)"
+                placeholder="請填寫訂購數量"
+                data-cost="489"
+                data-caption="隨身包蜂蜜 (龍眼蜜)"
+                data-unit="盒"
+              />
+            </li>
+            <li>
+              <label for="flower-honey"
+                >隨身包蜂蜜 (百花蜜) - $489/盒
+                <p>一包20g，一盒共20包。</p></label
+              >
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="flower-honey"
+                name="隨身包蜂蜜 (百花蜜)"
+                placeholder="請填寫訂購數量"
+                data-cost="489"
+                data-caption="隨身包蜂蜜 (百花蜜)"
+                data-unit="盒"
+              />
+            </li>
+            <li>
+              <label for="guifei-honey"
+                >隨身包蜂蜜 (貴妃蜜) - $489/盒
+                <p>一包20g，一盒共20包。</p></label
+              >
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="guifei-honey"
+                name="隨身包蜂蜜 (貴妃蜜)"
+                placeholder="請填寫訂購數量"
+                data-cost="489"
+                data-caption="隨身包蜂蜜 (貴妃蜜)"
+                data-unit="盒"
+              />
+            </li>
+          </ul>
 
-        <h3 class="category">團圓珍選</h3>
+          <h3 class="category">團圓珍選</h3>
 
-        <ul class="product-list">
-          <li>
-            <label for="sesame-powder"
-              >芝初高鈣黑芝麻粉 - $145/袋
-              <p>一袋200g。</p></label
-            >
-            <input
-              type="number"
-              inputmode="numeric"
-              class="number-input"
-              id="sesame-powder"
-              name="sesame-powder"
-              placeholder="請填寫訂購數量"
-              data-cost="145"
-              data-caption="芝初高鈣黑芝麻粉"
-              data-unit="袋"
-            />
-          </li>
-          <li>
-            <label for="chestnut"
-              >太珍香甘栗仁 - $280/組
-              <p>一包45g，10包一組。</p></label
-            >
-            <input
-              type="number"
-              inputmode="numeric"
-              class="number-input"
-              id="chestnut"
-              name="chestnut"
-              placeholder="請填寫訂購數量"
-              data-cost="280"
-              data-caption="太珍香甘栗仁"
-              data-unit="組"
-            />
-          </li>
-          <li>
-            <label for="thai-plum"
-              >泰國還魂梅 - $200/組
-              <p>一包40g，5包一組。</p></label
-            >
-            <input
-              type="number"
-              inputmode="numeric"
-              class="number-input"
-              id="thai-plum"
-              name="thai-plum"
-              placeholder="請填寫訂購數量"
-              data-cost="200"
-              data-caption="泰國還魂梅"
-              data-unit="組"
-            />
-          </li>
-          <li>
-            <label for="pocky-choco"
-              >Pocky巧克力棒家庭包 - $188/組
-              <p>每袋13.6g，一包9袋；2包一組。</p></label
-            >
-            <input
-              type="number"
-              inputmode="numeric"
-              class="number-input"
-              id="pocky-choco"
-              name="pocky-choco"
-              placeholder="請填寫訂購數量"
-              data-cost="188"
-              data-caption="Pocky家庭包"
-              data-unit="組"
-            />
-          </li>
-          <li>
-            <label for="shredded-squid"
-              >崑崎魷魚絲 - $249/組
-              <p>一包35g，5包一組。</p></label
-            >
-            <input
-              type="number"
-              inputmode="numeric"
-              class="number-input"
-              id="shredded-squid"
-              name="shredded-squid"
-              placeholder="請填寫訂購數量"
-              data-cost="249"
-              data-caption="崑崎魷魚絲"
-              data-unit="組"
-            />
-          </li>
-          <li>
-            <label for="chicken-noodles"
-              >韓國小雞麵 - $195/箱
-              <p>一箱30包。</p></label
-            >
-            <input
-              type="number"
-              inputmode="numeric"
-              class="number-input"
-              id="chicken-noodles"
-              name="chicken-noodles"
-              placeholder="請填寫訂購數量"
-              data-cost="195"
-              data-caption="韓國小雞麵"
-              data-unit="箱"
-            />
-          </li>
-        </ul>
-      </section>
+          <ul class="product-list">
+            <li>
+              <label for="sesame-powder"
+                >芝初高鈣黑芝麻粉 - $145/袋
+                <p>一袋200g。</p></label
+              >
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="sesame-powder"
+                name="芝初高鈣黑芝麻粉"
+                placeholder="請填寫訂購數量"
+                data-cost="145"
+                data-caption="芝初高鈣黑芝麻粉"
+                data-unit="袋"
+              />
+            </li>
+            <li>
+              <label for="chestnut"
+                >太珍香甘栗仁 - $280/組
+                <p>一包45g，10包一組。</p></label
+              >
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="chestnut"
+                name="太珍香甘栗仁"
+                placeholder="請填寫訂購數量"
+                data-cost="280"
+                data-caption="太珍香甘栗仁"
+                data-unit="組"
+              />
+            </li>
+            <li>
+              <label for="thai-plum"
+                >泰國還魂梅 - $200/組
+                <p>一包40g，5包一組。</p></label
+              >
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="thai-plum"
+                name="泰國還魂梅"
+                placeholder="請填寫訂購數量"
+                data-cost="200"
+                data-caption="泰國還魂梅"
+                data-unit="組"
+              />
+            </li>
+            <li>
+              <label for="pocky-choco"
+                >Pocky巧克力棒家庭包 - $188/組
+                <p>每袋13.6g，一包9袋；2包一組。</p></label
+              >
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="pocky-choco"
+                name="Pocky巧克力棒家庭包"
+                placeholder="請填寫訂購數量"
+                data-cost="188"
+                data-caption="Pocky巧克力棒家庭包"
+                data-unit="組"
+              />
+            </li>
+            <li>
+              <label for="shredded-squid"
+                >崑崎魷魚絲 - $249/組
+                <p>一包35g，5包一組。</p></label
+              >
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="shredded-squid"
+                name="崑崎魷魚絲"
+                placeholder="請填寫訂購數量"
+                data-cost="249"
+                data-caption="崑崎魷魚絲"
+                data-unit="組"
+              />
+            </li>
+            <li>
+              <label for="chicken-noodles"
+                >韓國小雞麵 - $195/箱
+                <p>一箱30包。</p></label
+              >
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="chicken-noodles"
+                name="韓國小雞麵"
+                placeholder="請填寫訂購數量"
+                data-cost="195"
+                data-caption="韓國小雞麵"
+                data-unit="箱"
+              />
+            </li>
+          </ul>
+        </section>
 
-      <section class="checkout">
-        <h3>結帳</h3>
+        <section class="checkout">
+          <h3>結帳</h3>
 
-        <div class="sub-container">
-          <div class="checkout-right">
-            <h4>購買人資料 (*必填)</h4>
+          <div class="sub-container">
+            <div class="checkout-right">
+              <h4>購買人資料 (*必填)</h4>
 
-            <ul class="client-info">
-              <li>
-                <label for="full-name">姓名*</label>
-                <input
-                  type="text"
-                  class="user-info-input"
-                  id="full-name"
-                  name="full-name"
-                  required
-                />
-              </li>
-              <li>
-                <label for="phone-number">電話*</label>
-                <input
-                  type="tel"
-                  pattern="^(?=.*[0-9])[- +()0-9]+$"
-                  class="user-info-input"
-                  id="phone-number"
-                  name="phone-number"
-                  required
-                />
-              </li>
-              <li>
-                <label for="email-address">信箱</label>
-                <input
-                  type="email"
-                  class="user-info-input"
-                  id="email-address"
-                  name="email-address"
-                />
-              </li>
-              <li>
-                <label for="address">寄送地址 / 超商門市名稱*</label>
-                <input
-                  type="text"
-                  placeholder='自取填"無"；超商取貨填“超商+店名”'
-                  class="user-info-input"
-                  id="address"
-                  name="delivery-address"
-                  required
-                />
-              </li>
-              <li>
-                <label for="account-digits">匯款帳號後五碼*</label>
-                <input
-                  type="number"
-                  inputmode="numeric"
-                  pattern="\d{5}"
-                  placeholder="請於下方選擇匯款方式後再填入"
-                  class="user-info-input"
-                  id="account-digits"
-                  name="account-digits"
-                  required
-                />
-              </li>
-              <li>
-                <label for="user-note">備註</label>
-                <input
-                  type="text"
-                  placeholder="有什麼話想對團圓說嗎？"
-                  class="user-info-input"
-                  id="user-note"
-                  name="user-note"
-                />
-              </li>
-            </ul>
-          </div>
-
-          <div class="checkout-left">
-            <div class="selected-product">
-              <h4>已選購商品</h4>
-              <ul>
-                <li><p>無</p></li>
+              <ul class="client-info">
+                <li>
+                  <label for="full-name">姓名*</label>
+                  <input
+                    type="text"
+                    class="user-info-input"
+                    id="full-name"
+                    name="姓名"
+                    required
+                  />
+                </li>
+                <li>
+                  <label for="phone-number">電話*</label>
+                  <input
+                    type="tel"
+                    pattern="^(?=.*[0-9])[- +()0-9]+$"
+                    class="user-info-input"
+                    id="phone-number"
+                    name="電話"
+                    required
+                  />
+                </li>
+                <li>
+                  <label for="email-address">信箱</label>
+                  <input
+                    type="email"
+                    class="user-info-input"
+                    id="email-address"
+                    name="信箱"
+                  />
+                </li>
+                <li>
+                  <label for="address">寄送地址 / 超商門市名稱*</label>
+                  <input
+                    type="text"
+                    placeholder='自取填"無"；超商取貨填“超商+店名”'
+                    class="user-info-input"
+                    id="address"
+                    name="寄送地址"
+                    required
+                  />
+                </li>
+                <li>
+                  <label for="account-digits">匯款帳號後五碼*</label>
+                  <input
+                    type="number"
+                    inputmode="numeric"
+                    pattern="\d{5}"
+                    placeholder="請於下方選擇匯款方式後再填入"
+                    class="user-info-input"
+                    id="account-digits"
+                    name="匯款帳號後五碼"
+                    required
+                  />
+                </li>
+                <li>
+                  <label for="user-note">備註</label>
+                  <input
+                    type="text"
+                    placeholder="有什麼話想對團圓說嗎？"
+                    class="user-info-input"
+                    id="user-note"
+                    name="備註"
+                  />
+                </li>
               </ul>
             </div>
 
-            <div class="delivery">
-              <h4>運送方式*</h4>
-              <select class="delivery-method" name="delivery-method">
-                <option data-cost="0" value="collect" selected>
-                  自取 (地點:五股芳洲路53號 全坤尊峰公園館)
-                </option>
-                <option data-cost="80" value="post">郵寄+$80</option>
-                <option data-cost="60" value="711">711店到店+$60</option>
-                <option data-cost="60" value="family-mart">
-                  全家店到店+$60
-                </option>
-              </select>
-              <div class="total-amount">
-                <p>商品含運總金額</p>
-                <p id="amount">$0</p>
+            <div class="checkout-left">
+              <div class="selected-product">
+                <h4>已選購商品</h4>
+                <ul>
+                  <li><p>無</p></li>
+                </ul>
+              </div>
+
+              <div class="delivery">
+                <h4>運送方式*</h4>
+                <select class="delivery-method" name="運送方式">
+                  <option data-cost="0" value="自取" selected>
+                    自取 (地點:五股芳洲路53號 全坤尊峰公園館)
+                  </option>
+                  <option data-cost="80" value="郵寄">郵寄+$80</option>
+                  <option data-cost="60" value="711">711店到店+$60</option>
+                  <option data-cost="60" value="全家">
+                    全家店到店+$60
+                  </option>
+                </select>
+                <div class="total-amount">
+                  <p>商品含運總金額</p>
+                  <p id="amount">$0</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div>
-          <h4 id="payment-text">付款方式*</h4>
-          <input
-            type="radio"
-            id="cash"
-            name="payment-method"
-            value="cash"
-            required
-          />
-          <label for="cash" class="payment-btn"
-            >取貨付款
-            <p class="payment-description">現場取貨時支付現金</p>
-          </label>
+          <div>
+            <h4 id="payment-text">付款方式*</h4>
+            <input
+              type="radio"
+              id="cash"
+              name="付款方式"
+              value="取貨付款"
+              required
+            />
+            <label for="cash" class="payment-btn"
+              >取貨付款
+              <p class="payment-description">現場取貨時支付現金</p>
+            </label>
 
-          <input
-            type="radio"
-            id="bank-transfer"
-            name="payment-method"
-            value="bank-transfer"
-            required
-          />
-          <label for="bank-transfer" class="payment-btn"
-            >銀行轉帳
-            <p class="payment-description">富邦銀行 (012) 8168-0000-389-265</p>
-          </label>
+            <input
+              type="radio"
+              id="bank-transfer"
+              name="付款方式"
+              value="銀行轉帳"
+              required
+            />
+            <label for="bank-transfer" class="payment-btn"
+              >銀行轉帳
+              <p class="payment-description">富邦銀行 (012) 8168-0000-389-265</p>
+            </label>
 
-          <input
-            type="radio"
-            id="jko-transfer"
-            name="payment-method"
-            value="jko-transfer"
-          />
-          <label for="jko-transfer" class="payment-btn"
-            >街口支付
-            <p class="payment-description">選擇後請掃描以下QR進行街口支付</p>
-          </label>
+            <input
+              type="radio"
+              id="jko-transfer"
+              name="付款方式"
+              value="街口支付"
+            />
+            <label for="jko-transfer" class="payment-btn"
+              >街口支付
+              <p class="payment-description">選擇後請掃描以下QR進行街口支付</p>
+            </label>
 
-          <img id="jko-pay-img" src="images/jko.jpg" class="hidden" />
-        </div>
-        <input type="submit" value="送出訂單" class="order-submit-btn" />
-      </section>
+            <img id="jko-pay-img" src="images/jko.jpg" class="hidden" />
+          </div>
+          <input type="submit" value="送出訂單" class="order-submit-btn" />
+        </section>
+      </div>
     </form>
   </body>
 </html>

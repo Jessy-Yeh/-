@@ -78,30 +78,28 @@ cash.addEventListener("click", function () {
   jkoImg.classList.add("hidden");
 });
 
-orderForm.addEventListener("submit", async function submitForm(event) {
-  event.preventDefault();
+// orderForm.addEventListener("submit", async function submitForm(event) {
+//   event.preventDefault();
 
-  const formData = new FormData(event.target);
-  productInputs.forEach((input) => {
-    if (input.value < 1) {
-      console.log(formData);
-      console.log(formData.get(input.name));
-      formData.delete(input.name);
-    }
-  });
-  formData.append("totalCost", totalCost);
-  const processedData = new URLSearchParams(formData).toString();
+//   const formData = new FormData(event.target);
+//   productInputs.forEach((input) => {
+//     if (input.value < 1) {
+//       console.log(formData);
+//       console.log(formData.get(input.name));
+//       formData.delete(input.name);
+//     }
+//   });
+//   formData.append("totalCost", totalCost);
+//   const processedData = new URLSearchParams(formData).toString();
 
-  // console.log(processedData);
-
-  try {
-    await fetch("/", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: processedData,
-    });
-    window.location.assign("/thankyou.html");
-  } catch (error) {
-    console.log(error);
-  }
-});
+//   try {
+//     await fetch("/", {
+//       method: "POST",
+//       headers: { "Content-Type": "application/x-www-form-urlencoded" },
+//       body: processedData,
+//     });
+//     window.location.assign("/thankyou.html");
+//   } catch (error) {
+//     console.log(error);
+//   }
+// });
