@@ -413,7 +413,9 @@
             <div class="delivery">
               <h4>運送方式*</h4>
               <select class="delivery-method" name="delivery-method">
-                <option data-cost="0" value="collect" selected>自取</option>
+                <option data-cost="0" value="collect" selected>
+                  自取 (地點:五股芳洲路53號 全坤尊峰公園館)
+                </option>
                 <option data-cost="80" value="post">郵寄+$80</option>
                 <option data-cost="60" value="711">711店到店+$60</option>
                 <option data-cost="60" value="family-mart">
@@ -451,6 +453,18 @@
           <label for="jko-transfer" class="payment-btn"
             >街口支付
             <p class="payment-description">選擇後請掃描以下QR進行街口支付</p>
+          </label>
+
+          <input
+            type="radio"
+            id="cash"
+            name="payment-method"
+            value="cash"
+            required
+          />
+          <label for="cash" class="payment-btn"
+            >取貨付款
+            <p class="payment-description">現場取貨時支付現金</p>
           </label>
 
           <img id="jko-pay-img" src="images/jko.jpg" class="hidden" />
