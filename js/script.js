@@ -3,6 +3,7 @@ const productInputs = document.querySelectorAll(".product-list input");
 const selectedProductList = document.querySelector(".selected-product ul");
 const deliveryMethodSelect = document.querySelector("select.delivery-method");
 const totalAmount = document.getElementById("amount");
+const totalAmountHiddenInput = document.getElementById("amount-hidden");
 const jkoTransfer = document.getElementById("jko-transfer");
 const bankTransfer = document.getElementById("bank-transfer");
 const cash = document.getElementById("cash");
@@ -48,6 +49,7 @@ function displaySelectedProducts() {
 
 function displayTotalCost() {
   totalAmount.innerHTML = "$" + totalCost;
+  totalAmountHiddenInput.value = totalCost;
 }
 
 deliveryMethodSelect.addEventListener("change", function () {
