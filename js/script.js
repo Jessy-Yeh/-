@@ -43,7 +43,7 @@ function displaySelectedProducts() {
       } = ${product.cost * product.quantity}</p>
   </li>`
     )
-    .join("");
+    .join("") || "<li><p>無</p></li>";
 }
 
 function displayTotalCost() {
