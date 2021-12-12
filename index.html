@@ -30,7 +30,7 @@
       method="POST"
       name="order-form"
       subject="Order"
-      action="https://script.google.com/macros/s/AKfycbwOIERUY3YNCbm2qiyZC0nhnx4tqRGqSmka6_z9edFvh-ZZUo3QjJn_2dQZkY3qO007Xg/exec"
+      action="https://script.google.com/macros/s/AKfycbxKnrJd21dMqlhqZFp8xK5QAFMcdt0fxerPR4M5BB6aRPvUDiD55GowJwvJr0x5fS8Btg/exec"
     >
       <div class="container">
         <section class="header">
@@ -358,13 +358,13 @@
                   />
                 </li>
                 <li>
-                  <label for="email-address">信箱*</label>
+                  <label for="email-address">信箱</label>
                   <input
                     type="email"
                     class="user-info-input"
+                    placeholder="填寫信箱可收到訂購明細"
                     id="email-address"
                     name="信箱"
-                    required
                   />
                 </li>
                 <li>
@@ -425,7 +425,13 @@
                 <div class="total-amount">
                   <p>商品含運總金額</p>
                   <p id="amount">$0</p>
-                  <input type="text" name="總金額" value="$0" id="amount-hidden" hidden />
+                  <input
+                    type="text"
+                    name="總金額"
+                    value="$0"
+                    id="amount-hidden"
+                    hidden
+                  />
                 </div>
               </div>
             </div>
