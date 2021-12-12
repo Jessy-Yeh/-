@@ -61,7 +61,7 @@
         return false;
       }
   
-      disableAllButtons(form);
+      showSubmittingMsg(form);
       var url = form.action;
       var xhr = new XMLHttpRequest();
       xhr.open('POST', url);
@@ -89,10 +89,15 @@
     };
     document.addEventListener("DOMContentLoaded", loaded, false);
   
-    function disableAllButtons(form) {
-      var buttons = form.querySelectorAll(".order-submit-btn");
-      for (var i = 0; i < buttons.length; i++) {
-        buttons[i].disabled = true;
+    function showSubmittingMsg(form) {
+      var submitBtn = form.querySelector(".order-submit-btn");
+      if (submitBtn) {
+        submitBtn.style.display = "none";
+      }
+
+      var submittingMessage = form.querySelector(".status-msg");
+      if (submittingMessage) {
+        submittingMessage.style.display = "flex";
       }
     }
   })();

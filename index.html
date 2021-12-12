@@ -21,7 +21,12 @@
     <title>團圓GO購樂</title>
 
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <script data-cfasync="false" type="text/javascript" src="js/form-submission-handler.js" defer></script>
+    <script
+      data-cfasync="false"
+      type="text/javascript"
+      src="js/form-submission-handler.js"
+      defer
+    ></script>
     <script src="js/script.js" defer></script>
   </head>
   <body>
@@ -32,7 +37,7 @@
       name="order-form"
       subject="Order"
       action="https://script.google.com/macros/s/AKfycbyVxWUiD-wS6m5ldubLU1v_sOgiQvP6kgNSeFRci7BRSztoz48SJIVzxHwdZ0OsNKD7/exec"
-      >
+    >
       <div class="container">
         <section class="header">
           <img id="logo" src="images/warm-logo-v2.png" />
@@ -420,9 +425,7 @@
                   </option>
                   <option data-cost="80" value="郵寄">郵寄+$80</option>
                   <option data-cost="60" value="711">711店到店+$60</option>
-                  <option data-cost="60" value="全家">
-                    全家店到店+$60
-                  </option>
+                  <option data-cost="60" value="全家">全家店到店+$60</option>
                 </select>
                 <div class="total-amount">
                   <p>商品含運總金額</p>
@@ -454,7 +457,9 @@
             />
             <label for="bank-transfer" class="payment-btn"
               >銀行轉帳
-              <p class="payment-description">富邦銀行 (012) 8168-0000-389-265</p>
+              <p class="payment-description">
+                富邦銀行 (012) 8168-0000-389-265
+              </p>
             </label>
 
             <input
@@ -471,6 +476,24 @@
             <img id="jko-pay-img" src="images/jko.jpg" class="hidden" />
           </div>
           <input type="submit" value="送出訂單" class="order-submit-btn" />
+
+          <div class="status-msg" style="display: none">
+            訂單傳送中，請稍候
+            <div class="lds-spinner">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
         </section>
       </div>
     </form>
