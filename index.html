@@ -431,6 +431,17 @@
         </div>
         <div>
           <h4 id="payment-text">付款方式*</h4>
+          <input
+            type="radio"
+            id="cash"
+            name="payment-method"
+            value="cash"
+            required
+          />
+          <label for="cash" class="payment-btn"
+            >取貨付款
+            <p class="payment-description">現場取貨時支付現金</p>
+          </label>
 
           <input
             type="radio"
@@ -453,18 +464,6 @@
           <label for="jko-transfer" class="payment-btn"
             >街口支付
             <p class="payment-description">選擇後請掃描以下QR進行街口支付</p>
-          </label>
-
-          <input
-            type="radio"
-            id="cash"
-            name="payment-method"
-            value="cash"
-            required
-          />
-          <label for="cash" class="payment-btn"
-            >取貨付款
-            <p class="payment-description">現場取貨時支付現金</p>
           </label>
 
           <img id="jko-pay-img" src="images/jko.jpg" class="hidden" />
