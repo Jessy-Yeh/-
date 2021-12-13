@@ -117,7 +117,7 @@ deliveryMethodSelect.addEventListener("change", function () {
 
 productInputs.forEach((input) =>
   input.addEventListener("change", function () {
-    if (Number(this.value) < 0) this.value = null;
+    if (Number(this.value) <= 0) this.value = null;
     if (Number(this.value) > 99) this.value = 99;
     updateSelectedProducts();
     updateTotalCost();
