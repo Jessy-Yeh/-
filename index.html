@@ -40,6 +40,116 @@
         <h2>團圓吃，才GO樂！</h2>
 
         <section class="product">
+          <h3 class="category">
+            <p class="category-promotion">限量預購商品</p>
+            海底撈 - 火鍋湯底
+          </h3>
+          <p class="category-description">＊預計12/27-12/31出貨＊</p>
+          <ul class="product-list">
+            <li>
+              <label for="hotpot-spicy"
+                >A.麻辣香鍋 - $95/包
+                <p>一包220g，3~5人份。</p>
+              </label>
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="hotpot-spicy"
+                name="麻辣香鍋"
+                placeholder="請填寫訂購數量"
+                data-cost="95"
+                data-caption="麻辣香鍋"
+                data-unit="包"
+              />
+            </li>
+            <li>
+              <label for="hotpot-original"
+                >B.麻辣清油 - $95/包
+                <p>一包220g，3~5人份。</p>
+              </label>
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="hotpot-original"
+                name="麻辣清油"
+                placeholder="請填寫訂購數量"
+                data-cost="95"
+                data-caption="麻辣清油"
+                data-unit="包"
+              />
+            </li>
+            <li>
+              <label for="hotpot-seafood"
+                >C.三鮮 - $95/包
+                <p>一包200g，3~5人份。</p>
+              </label>
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="hotpot-seafood"
+                name="三鮮"
+                placeholder="請填寫訂購數量"
+                data-cost="95"
+                data-caption="三鮮"
+                data-unit="包"
+              />
+            </li>
+            <li>
+              <label for="hotpot-tomato"
+                >D.酸香番茄 - $95/包
+                <p>一包200g，3~5人份。</p>
+              </label>
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="hotpot-tomato"
+                name="酸香番茄"
+                placeholder="請填寫訂購數量"
+                data-cost="95"
+                data-caption="酸香番茄"
+                data-unit="包"
+              />
+            </li>
+            <li>
+              <label for="hotpot-mushroom"
+                >E.鮮香菌湯 - $95/包
+                <p>一包200g，3~5人份。</p>
+              </label>
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="hotpot-mushroom"
+                name="鮮香菌湯"
+                placeholder="請填寫訂購數量"
+                data-cost="95"
+                data-caption="鮮香菌湯"
+                data-unit="包"
+              />
+            </li>
+            <li>
+              <label for="hotpot-3packs"
+                >任選三包一組 - $270/組
+                <p>於備註欄註明想要的口味英文代碼(如：A,C,D)。</p>
+              </label>
+              <input
+                type="number"
+                inputmode="numeric"
+                class="number-input"
+                id="hotpot-3packs"
+                name="任選三包一組"
+                placeholder="請填寫訂購數量"
+                data-cost="270"
+                data-caption="任選三包一組"
+                data-unit="包"
+              />
+            </li>
+          </ul>
+
           <h3 class="category">黑丸嫩仙草 - 黑糖磚</h3>
 
           <ul class="product-list">
@@ -371,7 +481,7 @@
                   <label for="address">寄送地址 / 超商門市名稱*</label>
                   <input
                     type="text"
-                    placeholder='自取填"無"；超商取貨填“超商+店名”'
+                    placeholder='自取填"無"'
                     class="user-info-input"
                     id="address"
                     name="寄送地址"
@@ -384,7 +494,7 @@
                     type="number"
                     inputmode="numeric"
                     pattern="\d{5}"
-                    placeholder="請於下方選擇匯款方式後再填入"
+                    placeholder='取貨付現填"無"'
                     class="user-info-input"
                     id="account-digits"
                     name="匯款帳號後五碼"
