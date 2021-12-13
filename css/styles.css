@@ -294,6 +294,7 @@ input::placeholder {
 }
 
 .order-submit-btn {
+  -webkit-appearance: none;
   color: white;
   border-style: none;
   border-radius: 5px;
