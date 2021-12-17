@@ -4,6 +4,9 @@ const submittingMessage = document.querySelector(".status-msg");
 const productInputs = document.querySelectorAll(".product-list input");
 const selectedProductList = document.querySelector(".selected-product ul");
 const deliveryMethodSelect = document.querySelector("select.delivery-method");
+const deliveryMethodOptions = document.querySelectorAll(
+  "select.delivery-method option"
+);
 const totalAmount = document.getElementById("amount");
 const totalAmountHiddenInput = document.getElementById("amount-hidden");
 const jkoTransfer = document.getElementById("jko-transfer");
@@ -27,26 +30,56 @@ function updateSelectedProducts() {
 }
 
 function updateTotalCost() {
-  const deliveryCost = Number(
-    deliveryMethodSelect.querySelector("option:checked").dataset.cost
+  const productCost = selectedProducts.reduce(
+    (acc, obj) => acc + obj.cost * obj.quantity,
+    0
   );
 
-  totalCost =
-    deliveryCost +
-    selectedProducts.reduce((acc, obj) => acc + obj.cost * obj.quantity, 0);
+  let deliveryCost;
+  if (productCost >= 600) {
+    deliveryCost = 0;
+    displayDeliveryOptionCosts(true);
+  } else {
+    deliveryCost = Number(
+      deliveryMethodSelect.querySelector("option:checked").dataset.cost
+    );
+    displayDeliveryOptionCosts(false);
+  }
+
+  totalCost = productCost + deliveryCost;
+}
+
+function displayDeliveryOptionCosts(freeDelivery) {
+  const chargedOptions = [...deliveryMethodOptions].filter(
+    (option) => Number(option.dataset.cost) > 0
+  );
+
+  if (freeDelivery) {
+    chargedOptions.forEach((option) => {
+      const caption = option.dataset.caption;
+      option.innerHTML = `${caption}0`;
+    });
+  } else {
+    chargedOptions.forEach((option) => {
+      const caption = option.dataset.caption;
+      const cost = option.dataset.cost;
+      option.innerHTML = `${caption}${cost}`;
+    });
+  }
 }
 
 function displaySelectedProducts() {
-  selectedProductList.innerHTML = selectedProducts
-    .map(
-      (product) => `
+  selectedProductList.innerHTML =
+    selectedProducts
+      .map(
+        (product) => `
   <li>
     <p>${product.name} - $${product.cost}/${product.unit} X ${
-        product.quantity
-      } = $${product.cost * product.quantity}</p>
+          product.quantity
+        } = $${product.cost * product.quantity}</p>
   </li>`
-    )
-    .join("") || "<li><p>無</p></li>";
+      )
+      .join("") || "<li><p>無</p></li>";
 }
 
 function displayTotalCost() {
@@ -63,27 +96,30 @@ function getFormData() {
   const elements = orderForm.elements;
   let honeypot;
 
-  const fields = Object.keys(elements).filter(function(k) {
-    if (elements[k].name === "honeypot") {
-      honeypot = elements[k].value;
-      return false;
-    }
-    return true;
-  }).map(function(k) {
-    if(elements[k].name !== undefined) {
-      return elements[k].name;
-    // special case for Edge's html collection
-    }else if(elements[k].length > 0){
-      return elements[k].item(0).name;
-    }
-  }).filter(function(item, pos, self) {
-    return self.indexOf(item) == pos && item;
-  });
+  const fields = Object.keys(elements)
+    .filter(function (k) {
+      if (elements[k].name === "honeypot") {
+        honeypot = elements[k].value;
+        return false;
+      }
+      return true;
+    })
+    .map(function (k) {
+      if (elements[k].name !== undefined) {
+        return elements[k].name;
+        // special case for Edge's html collection
+      } else if (elements[k].length > 0) {
+        return elements[k].item(0).name;
+      }
+    })
+    .filter(function (item, pos, self) {
+      return self.indexOf(item) == pos && item;
+    });
 
   const formData = {};
-  fields.forEach(function(name){
+  fields.forEach(function (name) {
     const element = elements[name];
-    
+
     // singular form elements just have one value
     formData[name] = element.value;
 
@@ -96,19 +132,17 @@ function getFormData() {
           data.push(item.value);
         }
       }
-      formData[name] = data.join(', ');
+      formData[name] = data.join(", ");
     }
   });
 
   // add form-specific values into the data
   formData.formDataNameOrder = JSON.stringify(fields);
   formData.formGoogleSheetName = orderForm.dataset.sheet || "responses"; // default sheet name
-  formData.formGoogleSendEmail
-    = orderForm.dataset.email || ""; // no email by default
+  formData.formGoogleSendEmail = orderForm.dataset.email || ""; // no email by default
 
-  return {data: formData, honeypot: honeypot};
+  return { data: formData, honeypot: honeypot };
 }
-
 
 deliveryMethodSelect.addEventListener("change", function () {
   updateTotalCost();
@@ -151,18 +185,20 @@ orderForm.addEventListener("submit", function (event) {
   showSubmittingMsg();
   const url = orderForm.action;
   const xhr = new XMLHttpRequest();
-  xhr.open('POST', url);
+  xhr.open("POST", url);
   // xhr.withCredentials = true;
   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-  xhr.onreadystatechange = function() {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        orderForm.reset();
-        window.location.assign("/thankyou.html");
-      }
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      orderForm.reset();
+      window.location.assign("/thankyou.html");
+    }
   };
   // url encode form data for sending as post data
-  const encoded = Object.keys(data).map(function(k) {
+  const encoded = Object.keys(data)
+    .map(function (k) {
       return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
-  }).join('&');
+    })
+    .join("&");
   xhr.send(encoded);
 });

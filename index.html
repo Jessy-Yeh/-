@@ -525,12 +525,27 @@
               <div class="delivery">
                 <h4>運送方式*</h4>
                 <select class="delivery-method" name="運送方式">
-                  <option data-cost="0" value="自取" selected>
+                  <option
+                    data-cost="0"
+                    data-caption="自取 (地點:五股芳洲路53號 全坤尊峰公園館)"
+                    value="自取"
+                    selected
+                  >
                     自取 (地點:五股芳洲路53號 全坤尊峰公園館)
                   </option>
-                  <option data-cost="80" value="郵寄">郵寄+$80</option>
-                  <option data-cost="60" value="711">711店到店+$60</option>
-                  <option data-cost="60" value="全家">全家店到店+$60</option>
+                  <option data-cost="80" data-caption="郵寄+$" value="郵寄">
+                    郵寄+$80
+                  </option>
+                  <option data-cost="60" data-caption="711店到店+$" value="711">
+                    711店到店+$60
+                  </option>
+                  <option
+                    data-cost="60"
+                    data-caption="全家店到店+$"
+                    value="全家"
+                  >
+                    全家店到店+$60
+                  </option>
                 </select>
                 <div class="total-amount">
                   <p>商品含運總金額</p>
@@ -543,6 +558,7 @@
                     hidden
                   />
                 </div>
+                <p>＊聖誕優惠＊ 即日起至12/31，消費滿$600免運。</p>
               </div>
             </div>
           </div>
