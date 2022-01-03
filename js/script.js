@@ -36,15 +36,20 @@ function updateTotalCost() {
   );
 
   let deliveryCost;
-  if (productCost >= 600) {
-    deliveryCost = 0;
-    displayDeliveryOptionCosts(true);
-  } else {
-    deliveryCost = Number(
-      deliveryMethodSelect.querySelector("option:checked").dataset.cost
-    );
-    displayDeliveryOptionCosts(false);
-  }
+  // if (productCost >= 600) {
+  //   deliveryCost = 0;
+  //   displayDeliveryOptionCosts(true);
+  // } else {
+  //   deliveryCost = Number(
+  //     deliveryMethodSelect.querySelector("option:checked").dataset.cost
+  //   );
+  //   displayDeliveryOptionCosts(false);
+  // }
+
+  deliveryCost = Number(
+    deliveryMethodSelect.querySelector("option:checked").dataset.cost
+  );
+  displayDeliveryOptionCosts(false);
 
   totalCost = productCost + deliveryCost;
 }
