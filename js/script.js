@@ -13,6 +13,7 @@ const jkoTransfer = document.getElementById("jko-transfer");
 const bankTransfer = document.getElementById("bank-transfer");
 const cash = document.getElementById("cash");
 const jkoImg = document.getElementById("jko-pay-img");
+const lineImg = document.getElementById("linepay-img");
 
 let selectedProducts = [];
 let totalCost = 0;
@@ -165,16 +166,24 @@ productInputs.forEach((input) =>
   })
 );
 
+linepay.addEventListener("click", function () {
+  lineImg.classList.remove("hidden");
+  jkoImg.classList.add("hidden");
+});
+
 jkoTransfer.addEventListener("click", function () {
   jkoImg.classList.remove("hidden");
+  lineImg.classList.add("hidden");
 });
 
 bankTransfer.addEventListener("click", function () {
   jkoImg.classList.add("hidden");
+  lineImg.classList.add("hidden");
 });
 
 cash.addEventListener("click", function () {
   jkoImg.classList.add("hidden");
+  lineImg.classList.add("hidden");
 });
 
 orderForm.addEventListener("submit", function (event) {

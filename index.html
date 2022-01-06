@@ -978,10 +978,21 @@
             />
             <label for="jko-transfer" class="payment-btn"
               >街口支付
-              <p class="payment-description">選擇後請掃描以下QR進行街口支付</p>
+              <p class="payment-description">
+                選擇後請掃描以下QR code進行街口支付
+              </p>
             </label>
-
             <img id="jko-pay-img" src="images/jko.jpg" class="hidden" />
+
+            <input type="radio" id="linepay" name="付款方式" value="linepay" />
+            <label for="linepay" class="payment-btn"
+              >Line Pay
+              <p class="payment-description">
+                請掃描以下QR code加入line好友 -
+                名稱顯示Olivia(或輸入電話0931159212)，再進行linepay轉帳
+              </p>
+              <img id="linepay-img" src="images/line.jpg" class="hidden" />
+            </label>
           </div>
           <input type="submit" value="送出訂單" class="order-submit-btn" />
 
